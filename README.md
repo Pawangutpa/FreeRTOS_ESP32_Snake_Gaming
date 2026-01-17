@@ -74,25 +74,25 @@ Each snake segment and food occupies **one grid cell**.
 
 ## 📁 Project Structure
 
-src/
-├── main.cpp → System entry point
-│
-├── config/ → Hardware & constants
-│ └── config.h
-│
-├── game/ → Snake game engine
-│ ├── game.h
-│ └── game.cpp
-│
-├── input/ → Button handling task
-│ ├── input.h
-│ └── input.cpp
-│
-├── display/ → OLED rendering task
-│ ├── display.h
-│ └── display.cpp
-│
-└── rtos/ → FreeRTOS task management
-├── rtos.h
-└── rtos.cpp
+- src/
+- ├── main.cpp → System entry point
+- │
+- ├── config/ → Hardware & constants
+- │ └── config.h
+- │
+- ├── game/ → Snake game engine
+- │ ├── game.h
+- │ └── game.cpp
+- │
+- ├── input/ → Button handling task
+- │ ├── input.h
+- │ └── input.cpp
+- │
+- ├── display/ → OLED rendering task
+- │ ├── display.h
+- │ └── display.cpp
+- │
+- └── rtos/ → FreeRTOS task management
+- ├── rtos.h
+- └── rtos.cpp
 
