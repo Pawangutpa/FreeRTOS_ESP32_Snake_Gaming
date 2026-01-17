@@ -74,25 +74,43 @@ Each snake segment and food occupies **one grid cell**.
 
 ## 📁 Project Structure
 
-- src/
-- ├── main.cpp → System entry point
+- snake_freertos_esp32/
 - │
-- ├── config/ → Hardware & constants
-- │ └── config.h
+- ├── README.md
+- ├── .gitignore
+- ├── platformio.ini          ← Used by PlatformIO ONLY
 - │
-- ├── game/ → Snake game engine
-- │ ├── game.h
-- │ └── game.cpp
+- ├── src/                    ← PlatformIO entry
+- │   └── main.cpp
 - │
-- ├── input/ → Button handling task
-- │ ├── input.h
-- │ └── input.cpp
+- ├── include/                ← Arduino-compatible headers
+- │   ├── config/
+- │   │   └── config.h
+- │   │
+- │   ├── game/
+- │   │   └── game.h
+- │   │
+- │   ├── input/
+- │   │   └── input.h
+- │   │
+- │   ├── display/
+- │   │   └── display.h
+- │   │
+- │   └── rtos/
+- │       └── rtos.h
 - │
-- ├── display/ → OLED rendering task
-- │ ├── display.h
-- │ └── display.cpp
+- ├── lib/                    ← Shared implementation (KEY PART)
+- │   ├── game/
+- │   │   └── game.cpp
+- │   │
+- │   ├── input/
+- │   │   └── input.cpp
+- │   │
+- │   ├── display/
+- │   │   └── display.cpp
+- │   │
+- │   └── rtos/
+- │       └── rtos.cpp
 - │
-- └── rtos/ → FreeRTOS task management
-- ├── rtos.h
-- └── rtos.cpp
-
+- └── arduino/
+-     └── snake_freertos_esp32.ino   ← Arduino entry point

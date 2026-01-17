@@ -2,7 +2,7 @@
 #include "display.h"
 #include "config/config.h"
 #include "game/game.h"
-//size
+
 int foodSize = 4;
 int offset = (CELL_SIZE - foodSize) / 2;
 
